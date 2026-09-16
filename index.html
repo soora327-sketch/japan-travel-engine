@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japan Travel Engine | Practical tools and guides for traveling around Japan</title>
+  <meta name="description" content="Japan Travel Engine shares practical tools and guides for traveling around Japan, including luggage storage research, hands-free travel planning, airport-to-hotel logistics, and Tokyo restaurant booking help.">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root {
+      --ink: #162033;
+      --muted: #5d687a;
+      --line: #dfe6ee;
+      --paper: #fbfcf8;
+      --card: #ffffff;
+      --navy: #173b57;
+      --blue: #2e73b8;
+      --sky: #e8f4ff;
+      --green: #1f7a5c;
+      --sand: #fff2d8;
+      --shadow: 0 18px 50px rgba(22, 32, 51, .10);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #e5f4ff 0, transparent 34rem), var(--paper);
+      line-height: 1.6;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 2;
+      background: rgba(251, 252, 248, .88);
+      border-bottom: 1px solid rgba(223, 230, 238, .8);
+      backdrop-filter: blur(14px);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0; }
+    .brand { font-weight: 800; letter-spacing: -.02em; color: var(--navy); }
+    .navlinks { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+    .hero { padding: 74px 0 48px; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 34px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--green); background: rgba(255,255,255,.75); font-weight: 700; font-size: 13px; }
+    h1 { font-size: clamp(42px, 7vw, 76px); line-height: .95; letter-spacing: -.065em; margin: 22px 0 18px; color: var(--navy); }
+    .subtitle { font-size: clamp(18px, 2.2vw, 24px); color: var(--muted); max-width: 720px; }
+    .hero-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .hero-card h2 { margin-top: 0; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .pill { border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; background: #fff; color: var(--muted); font-size: 14px; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 13px 18px; font-weight: 800; border: 1px solid var(--navy); }
+    .button.primary { background: var(--navy); color: #fff; }
+    .button.secondary { background: #fff; color: var(--navy); }
+    section { padding: 38px 0; }
+    .section-head { max-width: 760px; margin-bottom: 22px; }
+    .kicker { color: var(--green); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: .12em; }
+    h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.05; letter-spacing: -.04em; margin: 8px 0 12px; color: var(--navy); }
+    h3 { font-size: 22px; margin: 0 0 10px; color: var(--navy); }
+    .muted { color: var(--muted); }
+    .grid { display: grid; gap: 16px; }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .card { background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: 0 10px 28px rgba(22,32,51,.055); }
+    .card.accent { background: linear-gradient(135deg, #fff, var(--sky)); }
+    .card.warning { background: linear-gradient(135deg, #fff, var(--sand)); }
+    ul { padding-left: 20px; margin: 10px 0 0; }
+    li + li { margin-top: 7px; }
+    .status { display: inline-block; border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 800; background: var(--sky); color: var(--navy); }
+    .contact { background: var(--navy); color: #fff; border-radius: 28px; padding: 34px; box-shadow: var(--shadow); }
+    .contact h2, .contact a { color: #fff; }
+    .legal-box { font-size: 14px; color: var(--muted); background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+    footer { padding: 34px 0 46px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 30px; }
+    .footer-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+    @media (max-width: 860px) {
+      .hero-grid, .grid.three, .grid.two { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; flex-direction: column; }
+      .hero { padding-top: 44px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Japan Travel Engine</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#help">What we help with</a>
+        <a href="#luggage">Luggage</a>
+        <a href="#restaurant">Restaurant help</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Independent Japan travel media project</div>
+          <h1>Japan Travel Engine</h1>
+          <p class="subtitle">Practical tools and guides for traveling around Japan — focused on the small logistics that make a trip easier: luggage, airport-to-hotel movement, hands-free travel, and restaurant booking barriers.</p>
+          <div class="cta-row">
+            <a class="button primary" href="#luggage">Explore luggage research</a>
+            <a class="button secondary" href="mailto:japantravelengine.help@gmail.com">Contact us</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Project summary">
+          <h2>Built for practical trip planning</h2>
+          <p class="muted">Japan Travel Engine is starting as a small owned travel channel. We publish and test helpful resources for international visitors who want clear, practical options instead of vague travel inspiration.</p>
+          <div class="pill-row">
+            <span class="pill">Japan travel planning</span>
+            <span class="pill">Luggage storage</span>
+            <span class="pill">Airport → hotel</span>
+            <span class="pill">Hotel → hotel</span>
+            <span class="pill">Restaurant booking help</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="help">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">What we help with</div>
+          <h2>Clear guides for common Japan travel friction.</h2>
+          <p class="muted">This page is intentionally small. It introduces the focus areas we are researching and preparing for public testing.</p>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <h3>Japan travel planning</h3>
+            <p class="muted">Plain-English guidance for practical decisions: where to store bags, how to move between hotel areas, and when to book help.</p>
+          </article>
+          <article class="card">
+            <h3>Hands-free travel</h3>
+            <p class="muted">Researching luggage forwarding, luggage storage, coin locker alternatives, airport-to-hotel, and hotel-to-hotel options.</p>
+          </article>
+          <article class="card">
+            <h3>Restaurant booking help</h3>
+            <p class="muted">A Tokyo-focused pilot concept for travelers who already chose one restaurant but need help with Japanese phone booking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="luggage">
+      <div class="wrap grid two">
+        <article class="card accent">
+          <span class="status">Coming soon / research stage</span>
+          <h2>Japan Luggage & Hands-Free Travel</h2>
+          <p>We are researching practical luggage forwarding and storage options across Japan for travelers who want to move around without carrying bags all day.</p>
+          <ul>
+            <li>Luggage storage and temporary bag drop options</li>
+            <li>Airport → hotel and hotel → airport luggage movement</li>
+            <li>Hotel → hotel forwarding and same-day / next-day constraints</li>
+            <li>Coin locker alternatives for larger bags</li>
+            <li>Hands-free travel planning around Tokyo, Osaka, Kyoto, and major stations</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>What this is not</h3>
+          <p class="muted">This is not yet a complete booking service, and we do not claim to operate luggage forwarding ourselves. The goal is to compare practical options and build useful traveler-facing guides before recommending any service.</p>
+          <h3>Planned demand test</h3>
+          <p class="muted">The next test will measure whether travelers need a simple Japan luggage finder before investing in a larger website or database.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="restaurant">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Pilot concept</div>
+          <h2>Tokyo Restaurant Booking Help</h2>
+          <p class="muted">This service is being prepared as a small manual pilot under Japan Travel Engine. It is for international visitors who already picked one Tokyo restaurant and mainly need help because Japanese phone booking is the barrier.</p>
+        </div>
+        <div class="grid two">
+          <article class="card warning">
+            <h3>Current MVP scope</h3>
+            <ul>
+              <li>Tokyo restaurants only</li>
+              <li>One customer-selected restaurant</li>
+              <li>1–4 guests</li>
+              <li>Preferably at least 72 hours before the visit</li>
+              <li>A real human Japanese speaker calls the restaurant and sends the result in English</li>
+              <li>Reservation success is not guaranteed</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Not included in the pilot</h3>
+            <ul>
+              <li>Hotels, transport, flights, tours, tickets, or itinerary planning</li>
+              <li>Restaurant discovery or concierge recommendations</li>
+              <li>Restaurant bill payment, deposits, or card guarantees paid by us</li>
+              <li>Complex allergy, medical, or safety handling</li>
+              <li>Large groups or special event arrangements</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap grid two">
+        <article class="card">
+          <div class="kicker">About</div>
+          <h2>Who this is for</h2>
+          <p>Japan Travel Engine is for international visitors who want practical answers before and during a Japan trip.</p>
+          <ul>
+            <li>First-time or repeat travelers planning logistics in English</li>
+            <li>Travelers with luggage, station, airport, or hotel-transfer questions</li>
+            <li>Travelers who already know what they want but face a Japan-specific process barrier</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="kicker">Editorial approach</div>
+          <h2>Practical before broad.</h2>
+          <p class="muted">We are not trying to publish a giant travel blog. We focus on narrow, high-friction travel problems, test whether the information is useful, and expand only when there is real demand.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div class="kicker" style="color:#b9f2dc">Contact</div>
+        <h2>Contact Japan Travel Engine</h2>
+        <p>For questions about this project, email <a href="mailto:japantravelengine.help@gmail.com">japantravelengine.help@gmail.com</a>.</p>
+        <p style="opacity:.82">Please do not send passport numbers, credit card details, medical records, or other unnecessary sensitive information by email.</p>
+      </div>
+    </section>
+
+    <section id="disclosure">
+      <div class="wrap grid two">
+        <div class="legal-box">
+          <h3>Affiliate disclosure</h3>
+          <p>Some links on this site may be affiliate links. If you book through them, we may earn a commission at no extra cost to you. We aim to explain options clearly and avoid recommending services that are not relevant to the traveler’s actual need.</p>
+        </div>
+        <div class="legal-box" id="privacy">
+          <h3>Privacy</h3>
+          <p>If you contact us by email, we use the information you provide only to respond to your inquiry or operate the relevant pilot service. Do not send unnecessary sensitive information. Any future request form or payment flow will provide clearer privacy and service terms before collecting customer details.</p>
+        </div>
+        <div class="legal-box" id="terms">
+          <h3>Terms</h3>
+          <p>This page is an early public project page for Japan Travel Engine. Luggage finder content is in research stage. Tokyo Restaurant Booking Help is a limited pilot concept and is not a guaranteed reservation service. Payment, customer intake, and restaurant contact are not live on this page.</p>
+        </div>
+        <div class="legal-box" id="legal">
+          <h3>Commercial / legal notice</h3>
+          <p>For any paid service pilot, operator information required by applicable Japanese commercial display rules can be requested by contacting <a href="mailto:japantravelengine.help@gmail.com">japantravelengine.help@gmail.com</a>. Paid services, payment links, and customer request forms are not currently active on this page.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Japan Travel Engine</strong>
+      <div class="footer-links">
+        <a href="#disclosure">Affiliate disclosure</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#legal">Commercial / legal notice</a>
+        <a href="mailto:japantravelengine.help@gmail.com">Contact</a>
+      </div>
+      <p>© 2026 Japan Travel Engine. Independent practical Japan travel media project.</p>
+    </div>
+  </footer>
+</body>
+</html>
